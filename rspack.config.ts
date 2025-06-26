@@ -28,9 +28,10 @@ export default defineConfig({
   },
   output: {
     // You need to set a unique value that is not equal to other applications
+    path: path.resolve(__dirname, "dist"),
     uniqueName: "trivia_authentication",
     // publicPath must be configured if using manifest
-    publicPath: "http://localhost:3000/",
+    publicPath: process.env.PUBLIC_PATH || "auto",
   },
 
   experiments: {
